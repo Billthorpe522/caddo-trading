@@ -285,6 +285,54 @@ section {
   flex-shrink: 0;
 }
 
+/* eBay promo strip — always-visible channel marker */
+.ebay-strip {
+  background: var(--yellow);
+  border-bottom: 3px solid var(--black);
+  position: relative;
+  z-index: 5;
+}
+.ebay-strip-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 12px 22px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.ebay-strip-text {
+  flex: 1;
+  min-width: 0;
+}
+.ebay-strip-title {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px; font-weight: 700;
+  color: var(--black);
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+.ebay-strip-sub {
+  display: block;
+  font-size: 12px;
+  color: var(--black);
+  opacity: 0.78;
+  letter-spacing: 0.5px;
+}
+.ebay-strip-btn {
+  background: var(--black);
+  color: var(--yellow);
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 0;
+  box-shadow: 0 4px 12px rgba(13, 13, 13, 0.3);
+}
+
 /* Featured pieces strip */
 .featured-strip {
   background: var(--black);
@@ -327,6 +375,20 @@ section {
   padding: 4px 8px;
   border-radius: 2px;
 }
+.piece-ebay {
+  position: absolute;
+  top: 8px; right: 8px;
+  background: var(--black);
+  color: var(--yellow);
+  font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.15s ease;
+}
+.piece-ebay:hover { transform: scale(1.05); }
 .piece-meta {
   padding: 12px 12px 14px;
   background: var(--black);
@@ -679,7 +741,8 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
       <div class="brand-logo"><img src="assets/images/hero/logo-original.jpg" alt="Caddo Trading Company"></div>
       <div class="brand-text">Caddo Trading<small>Co., Inc.</small></div>
     </div>
-    <a href="tel:18702853736" class="call-btn">Call</a>
+    <a href="https://www.ebay.com/str/Caddoman/" target="_blank" rel="noopener" class="call-btn" style="background: var(--black); color: var(--yellow); box-shadow: none; margin-right: 8px;">eBay</a>
+<a href="tel:18702853736" class="call-btn">Call</a>
   </div>
 
   <div class="hero-body">
@@ -701,6 +764,17 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
       <div class="drone-frame-title">Aerial View of the Ka-Do-Ha Site</div>
       <div class="drone-frame-sub">Cinematic drone footage of the 1,000-year-old Caddo mounds and museum property</div>
     </div>
+  </div>
+</div>
+
+<!-- EBAY PROMO STRIP — persistent, visible channel marker -->
+<div class="ebay-strip">
+  <div class="ebay-strip-inner">
+    <div class="ebay-strip-text">
+      <span class="ebay-strip-title">🛒 eBay Store "Caddoman"</span>
+      <span class="ebay-strip-sub">active inventory · new listings weekly · buy directly from Sam</span>
+    </div>
+    <a href="https://www.ebay.com/str/Caddoman/" target="_blank" rel="noopener" class="ebay-strip-btn">Shop eBay →</a>
   </div>
 </div>
 
@@ -803,6 +877,7 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
       <div class="piece">
         <div class="piece-img">
           <span class="piece-tag">New</span>
+          <span class="piece-ebay" onclick="window.open('https://www.ebay.com/str/Caddoman/','_blank'); event.preventDefault();">eBay →</span>
           <img src="assets/images/catalog/arrowheads/4879.jpg" alt="Fluted chert blade">
         </div>
         <div class="piece-meta">
@@ -814,6 +889,7 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
       <div class="piece">
         <div class="piece-img">
           <span class="piece-tag">Museum</span>
+          <span class="piece-ebay" onclick="window.open('https://www.ebay.com/str/Caddoman/','_blank'); event.preventDefault();">eBay →</span>
           <img src="assets/images/catalog/museumq/pot543b.jpg" alt="Caddo pottery vessel">
         </div>
         <div class="piece-meta">
@@ -825,6 +901,7 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
       <div class="piece">
         <div class="piece-img">
           <span class="piece-tag">For Sale</span>
+          <span class="piece-ebay" onclick="window.open('https://www.ebay.com/str/Caddoman/','_blank'); event.preventDefault();">eBay →</span>
           <img src="assets/images/catalog/beaded/BI1191.jpg" alt="Beaded item">
         </div>
         <div class="piece-meta">
@@ -836,6 +913,7 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
       <div class="piece">
         <div class="piece-img">
           <span class="piece-tag">Display</span>
+          <span class="piece-ebay" onclick="window.open('https://www.ebay.com/str/Caddoman/','_blank'); event.preventDefault();">eBay →</span>
           <img src="assets/images/catalog/display/Octogon_Frames_1.jpg" alt="Display frame">
         </div>
         <div class="piece-meta">
@@ -982,8 +1060,8 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
         </div>
         <div style="margin-top: 16px;">
           <div class="contact-card-label">Also On eBay</div>
-          <a href="https://www.ebay.com/str/Caddoman/" style="display: inline-block; margin-top: 4px; background: var(--yellow); color: var(--black); padding: 8px 14px; border-radius: 4px; font-weight: 800; font-family: -apple-system, sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase;">→ eBay Store "Caddoman"</a>
-          <div class="contact-card-sub">Active inventory for online buyers</div>
+          <a href="https://www.ebay.com/str/Caddoman/" target="_blank" rel="noopener" style="display: block; margin-top: 8px; background: var(--yellow); color: var(--black); padding: 14px 18px; border-radius: 4px; font-weight: 800; font-family: -apple-system, sans-serif; font-size: 14px; letter-spacing: 1.2px; text-transform: uppercase; text-align: center; box-shadow: 0 4px 12px rgba(245, 197, 24, 0.3);">🛒 Shop eBay Store "Caddoman" →</a>
+          <div class="contact-card-sub" style="margin-top: 8px;">New listings weekly · ships from Murfreesboro AR · 100% Sam-direct sales</div>
         </div>
       </div>
 
@@ -994,6 +1072,8 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
 <footer>
   <span class="footer-mark">Caddo Trading Company · est. 2002</span>
   Authentic Native American Artifacts · 281 Kadoha Rd, Murfreesboro AR 71958 · (870) 285-3736<br>
+  <a href="https://www.ebay.com/str/Caddoman/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 10px; background: var(--yellow); color: var(--black); padding: 8px 14px; border-radius: 4px; font-weight: 800; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;">🛒 Shop on eBay: Caddoman</a>
+  <br><br>
   © 2002–2026 Caddo Trading Co., Inc. · Member AACA · CSAS
 </footer>
 
