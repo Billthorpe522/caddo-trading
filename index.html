@@ -387,8 +387,10 @@ section {
   cursor: pointer;
   z-index: 2;
   transition: transform 0.15s ease;
+  text-decoration: none;
+  display: inline-block;
 }
-.piece-ebay:hover { transform: scale(1.05); }
+.piece-ebay:hover { transform: scale(1.05); color: var(--yellow); }
 .piece-meta {
   padding: 12px 12px 14px;
   background: var(--black);
@@ -877,7 +879,7 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
       <div class="piece">
         <div class="piece-img">
           <span class="piece-tag">New</span>
-          <span class="piece-ebay" onclick="window.open('https://www.ebay.com/str/Caddoman/','_blank'); event.preventDefault();">eBay →</span>
+          <a class="piece-ebay" href="https://www.ebay.com/str/Caddoman/" target="_blank" rel="noopener">eBay →</a>
           <img src="assets/images/catalog/arrowheads/4879.jpg" alt="Fluted chert blade">
         </div>
         <div class="piece-meta">
@@ -889,7 +891,7 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
       <div class="piece">
         <div class="piece-img">
           <span class="piece-tag">Museum</span>
-          <span class="piece-ebay" onclick="window.open('https://www.ebay.com/str/Caddoman/','_blank'); event.preventDefault();">eBay →</span>
+          <a class="piece-ebay" href="https://www.ebay.com/str/Caddoman/" target="_blank" rel="noopener">eBay →</a>
           <img src="assets/images/catalog/museumq/pot543b.jpg" alt="Caddo pottery vessel">
         </div>
         <div class="piece-meta">
@@ -901,7 +903,7 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
       <div class="piece">
         <div class="piece-img">
           <span class="piece-tag">For Sale</span>
-          <span class="piece-ebay" onclick="window.open('https://www.ebay.com/str/Caddoman/','_blank'); event.preventDefault();">eBay →</span>
+          <a class="piece-ebay" href="https://www.ebay.com/str/Caddoman/" target="_blank" rel="noopener">eBay →</a>
           <img src="assets/images/catalog/beaded/BI1191.jpg" alt="Beaded item">
         </div>
         <div class="piece-meta">
@@ -913,7 +915,7 @@ button, .cta, .call-btn, .inv-card, .audio-play { -webkit-tap-highlight-color: r
       <div class="piece">
         <div class="piece-img">
           <span class="piece-tag">Display</span>
-          <span class="piece-ebay" onclick="window.open('https://www.ebay.com/str/Caddoman/','_blank'); event.preventDefault();">eBay →</span>
+          <a class="piece-ebay" href="https://www.ebay.com/str/Caddoman/" target="_blank" rel="noopener">eBay →</a>
           <img src="assets/images/catalog/display/Octogon_Frames_1.jpg" alt="Display frame">
         </div>
         <div class="piece-meta">
