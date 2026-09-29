@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://billthorpe522.github.io/caddo-trading/sitemap.xml
